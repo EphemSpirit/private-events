@@ -1,0 +1,29 @@
+<section class="section">
+  <div class="container">
+    <div class="column is-centered">
+      <div class="column is-4">
+        <h1>Sign In</h1>
+        <%= form_for @user do |f| %>
+          <% if @user.errors.any? %>
+            <% @user.errors.full_messages.each do |msg| %>
+              <ul>
+                <li><%= msg %></li>
+              </ul>
+            <% end %>
+          <% end %>
+          <p>
+            <%= f.label :name, "Username:" %><br>
+            <%= f.text_field :name %>
+          </p>
+          <p>
+            <%= f.label :email, "Email:" %><br>
+            <%= f.text_field :email %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
