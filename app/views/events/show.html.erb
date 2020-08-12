@@ -1,0 +1,25 @@
+<p>
+
+  Event Name: <%= @event.title %>
+
+</p>
+
+<p>
+
+  Event Description: <%= @event.description %>
+
+</p>
+
+<p>
+
+  Event Date: <%= @event.date %>
+
+</p>
+
+<p>
+
+  Created by: <%= @event.creator.name %>
+
+</p>
+
+<%= link_to "See All of Your Events", events_path %>
