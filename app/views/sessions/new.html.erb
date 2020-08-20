@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="container">
+    <div class="column is-centered">
+      <div class="column is-4">
+        <h1>Log In</h1>
+        <%= form_with(url: sessions_new_path, scope: :session, local: true) do |f| %>
+          <p>
+            <%= f.label :name, "Username:" %><br>
+            <%= f.text_field :name %>
+          </p>
+          <p>
+            <%= f.label :email, "Email:" %><br>
+            <%= f.text_field :email %>
+          </p>
+          <p>
+            <%= f.submit "Log In" %>
+          </p>
+        <% end %>
+      </div>
+      <%= link_to "New User? Sign Up!", new_user_path %>
+    </div>
+  </div>
+</section>
