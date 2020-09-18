@@ -1,8 +1,17 @@
 <section class="section">
   <div class="container">
     <div class="column is-left is-one-third">
-
-      <% @events.each do |event| %>
+      <h1>Previous Events</h1>
+      <% current_user.previous_events.each do |event| %>
+        <ul>
+          <li><%= link_to event.title, event %></li>
+          <li><%= event.description %></li>
+          <li><%= event.date %></li><br>
+        </ul>
+      <% end %>
+      <br><br>
+      <h1>Upcoming Events</h1>
+      <% current_user.upcoming_events.each do |event| %>
         <ul>
           <li><%= link_to event.title, event %></li>
           <li><%= event.description %></li>
@@ -11,6 +20,8 @@
       <% end %>
 
       <%= link_to "Create a New Event", new_event_path %>
+
+      <%= link_to "Back to your page", user_path(current_user) %>
 
     </div>
   </div>

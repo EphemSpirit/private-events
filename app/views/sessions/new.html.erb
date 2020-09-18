@@ -3,7 +3,7 @@
     <div class="column is-centered">
       <div class="column is-4">
         <h1>Log In</h1>
-        <%= form_with(url: sessions_new_path, scope: :session, local: true) do |f| %>
+        <%= form_with(url: sessions_path, scope: :session, local: true) do |f| %>
           <p>
             <%= f.label :name, "Username:" %><br>
             <%= f.text_field :name %>

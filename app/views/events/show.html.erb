@@ -1,38 +1,3 @@
-<h1>Past Event</h1>
-<p>
-
-  Event Name: <%= @event.title %>
-
-</p>
-
-<p>
-
-  Event Description: <%= @event.description %>
-
-</p>
-
-<p>
-
-  Event Date: <%= @event.date %>
-
-</p>
-
-<p>
-
-  Created by: <%= @event.creator.name %>
-
-</p>
-
-<p>
-
-  Attended by:
-  <% @event.attendees.each do |attendee| %>
-    <%= attendee.name %>
-  <% end %>
-
-</p>
-
-<h1>Upcoming Events</h1>
 <p>
 
   Event Name: <%= @event.title %>
